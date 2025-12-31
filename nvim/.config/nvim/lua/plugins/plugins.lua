@@ -2,9 +2,6 @@ return {
     {
         'ellisonleao/gruvbox.nvim',
         as = 'gruvbox',
-        config = function()
-            vim.cmd('colorscheme gruvbox')
-        end
     },
     {
         'nvim-lualine/lualine.nvim',
@@ -12,7 +9,7 @@ return {
         config = function()
             require('lualine').setup({
                 options = {
-                    theme = 'gruvbox_dark'
+                    theme = 'nightfox'
                 }
             })
         end
