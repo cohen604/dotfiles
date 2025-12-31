@@ -27,26 +27,46 @@ return {
                 filetypes = { 'terraform', 'terraform-vars' },
                 root_markers = { '.terraform', '.git' },
             }
-            vim.lsp.config.tailwindcss = ({
+            vim.lsp.config.lua_ls = {
+                settings = {
+                    Lua = {
+                        runtime = {
+                            version = 'LuaJIT',
+                        },
+                        diagnostics = {
+                            globals = { 'vim' },
+                        },
+                        workspace = {
+                            library = vim.api.nvim_get_runtime_file("", true),
+                            checkThirdParty = false,
+                        },
+                        telemetry = {
+                            enable = false,
+                        },
+                    },
+                },
+            }
+            vim.lsp.config.tailwindcss = {
                 settings = {
                     tailwindCSS = {
                         includeLanguages = { "html", "astro", "tailwindcss", "typescript" }
                     }
                 }
-            })
-
-            vim.lsp.enable({'tofu_ls'})
+            }
 
             require('mason').setup({})
             require('mason-lspconfig').setup({
                 ensure_installed = lsp_servers,
-                handlers = nil
             })
+
+            -- Enable all LSP servers after mason-lspconfig has installed them
+            vim.lsp.enable(lsp_servers)
 
 
             local cmp = require('cmp')
             local capabilities = require('cmp_nvim_lsp').default_capabilities()
-            -- local cmp_select = {behavior = cmp.SelectBehavior.Select}
+			vim.lsp.config('*', { capabilities = capabilities })
+            local cmp_select = { behavior = cmp.SelectBehavior.Select }
             local cmp_mappings = cmp.mapping.preset.insert({
                 ['<C-u>'] = cmp.mapping.scroll_docs(-4),
                 ['<C-d>'] = cmp.mapping.scroll_docs(4),
