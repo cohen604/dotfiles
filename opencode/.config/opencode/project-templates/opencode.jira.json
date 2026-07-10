@@ -1,0 +1,11 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "linear": {
+      "enabled": false
+    },
+    "atlassian": {
+      "enabled": true
+    }
+  }
+}
