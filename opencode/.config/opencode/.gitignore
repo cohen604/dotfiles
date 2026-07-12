@@ -1,6 +1,15 @@
 node_modules/
 bun.lock
 package-lock.json
+.env
+.env.*
 secrets/
 *.local
 *.local.json
+auth.json
+mcp-auth.json
+credentials*.json
+*.key
+*.pem
+*.p12
+*.pfx
