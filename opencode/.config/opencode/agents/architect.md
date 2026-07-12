@@ -1,7 +1,7 @@
 ---
 description: Produces implementation-ready designs grounded in acceptance criteria, repository evidence, and existing decisions.
 mode: subagent
-model: openai/gpt-5.5
+model: openai/gpt-5.6-sol
 variant: high
 steps: 18
 color: accent

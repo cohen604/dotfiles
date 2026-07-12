@@ -11,6 +11,10 @@
       "type": "remote",
       "url": "https://mcp.linear.app/mcp",
       "enabled": true,
+      "oauth": false,
+      "headers": {
+        "Authorization": "Bearer {env:LINEAR_WORKSPACE_TOKEN}"
+      },
       "timeout": 15000
     }
   }

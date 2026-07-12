@@ -1,7 +1,7 @@
 ---
 description: Reads a Linear or Jira ticket and converts it into a source-linked Work Brief without mutating the tracker.
 mode: subagent
-model: openai/gpt-5.4-mini
+model: openai/gpt-5.6-luna
 variant: low
 steps: 12
 color: info

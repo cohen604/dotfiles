@@ -1,5 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "shell": "/bin/zsh",
   "model": "openai/gpt-5.6-sol",
   "small_model": "openai/gpt-5.6-luna",
   "default_agent": "lead",
@@ -40,6 +41,9 @@
       "type": "remote",
       "url": "https://mcp.context7.com/mcp",
       "enabled": true,
+      "headers": {
+        "CONTEXT7_API_KEY": "{env:CONTEXT7_API_KEY}"
+      },
       "timeout": 15000
     },
     "gh_grep": {

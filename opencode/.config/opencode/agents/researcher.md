@@ -1,7 +1,7 @@
 ---
 description: Researches version-matched official documentation and upstream examples with citations, without editing code.
 mode: subagent
-model: openai/gpt-5.4-mini
+model: openai/gpt-5.6-luna
 variant: medium
 steps: 16
 color: info

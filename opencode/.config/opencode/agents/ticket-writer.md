@@ -1,7 +1,7 @@
 ---
 description: Performs an explicitly approved Linear or Jira comment or status mutation after showing the exact intended change.
 mode: subagent
-model: openai/gpt-5.4-mini
+model: openai/gpt-5.6-luna
 variant: low
 steps: 10
 color: error

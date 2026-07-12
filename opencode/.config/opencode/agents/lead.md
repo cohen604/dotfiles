@@ -3,7 +3,6 @@ description: Coordinates ticket intake, research, architecture, implementation, 
 mode: primary
 model: openai/gpt-5.6-sol
 variant: medium
-steps: 30
 color: primary
 permission:
   "*": deny

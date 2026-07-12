@@ -1,7 +1,7 @@
 ---
 description: Independently reviews changes against the ticket, plan, tests, and project decisions without editing files.
 mode: subagent
-model: openai/gpt-5.5
+model: openai/gpt-5.6-sol
 variant: high
 steps: 24
 color: warning
