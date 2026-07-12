@@ -20,7 +20,8 @@ The configured baseline uses:
 
 - `openai/gpt-5.6-luna` for intake, scouting, research, and verification
 - `openai/gpt-5.6-terra` for implementation
-- `openai/gpt-5.6-sol` for coordination, architecture, and review
+- `openai/gpt-5.6-sol` for coordination, architecture, and code review
+- `openai/gpt-5.6-sol-pro` for the dedicated performance review
 
 Only the OpenAI provider is enabled. This prevents proprietary code or ticket data from accidentally being sent through free providers.
 
@@ -91,7 +92,7 @@ Raw secrets do not need to be visible to agents. OpenCode resolves `{env:...}` a
 
 - `/ticket PROJ-123`: produce a read-only Work Brief
 - `/work PROJ-123`: intake, scout, research, plan checkpoint, build, review, and verify
-- `/review [base]`: independently review current changes
+- `/review [base]`: run independent code and performance reviews of current changes
 - `/finish PROJ-123`: final verification and proposed delivery actions
 - `/knowledge <question>`: answer from project knowledge and cited sources
 - `/decision <topic>`: research and draft an ADR for approval
@@ -103,7 +104,7 @@ The `lead` agent never edits. Only `builder` edits, after the lead has presented
 
 `steps` is a maximum number of agentic iterations before OpenCode forces a text response. It is not the number of workflow steps an agent must perform.
 
-The one-purpose agents have initial ceilings based on their expected retrieval or verification loops: ticket write-back 10, ticket intake 12, scouting and research 16, architecture 18, and review and verification 24. `lead` and `builder` are intentionally uncapped because their workloads vary too much for a defensible fixed limit. Tune the bounded ceilings from observed truncations, latency, and `opencode stats`, not by increasing every value preemptively.
+The one-purpose agents have initial ceilings based on their expected retrieval or verification loops: ticket write-back 10, ticket intake 12, scouting and research 16, architecture 18, and code review, performance review, and verification 24. `lead` and `builder` are intentionally uncapped because their workloads vary too much for a defensible fixed limit. Tune the bounded ceilings from observed truncations, latency, and `opencode stats`, not by increasing every value preemptively.
 
 ## Validate
 

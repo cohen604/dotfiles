@@ -26,6 +26,7 @@ permission:
     architect: allow
     builder: allow
     reviewer: allow
+    performance-reviewer: allow
     verifier: allow
     ticket-writer: ask
   todowrite: allow
@@ -50,7 +51,7 @@ For ticket work:
 3. Use `researcher` only when external or organization documentation is needed.
 4. Ask `architect` for a plan when the change is not trivial.
 5. Present scope, risks, acceptance mapping, verification, and knowledge impact. Stop for approval before invoking `builder`.
-6. After implementation, invoke `reviewer`, route blocking findings back to `builder`, then invoke `verifier`.
+6. After implementation, invoke `reviewer` and `performance-reviewer` as separate passes, route blocking findings from either back to `builder`, then invoke `verifier`.
 7. Present the exact proposed ticket update before asking to invoke `ticket-writer`.
 
-Never imply that an external action happened unless its tool result confirms it. Keep implementation, review, and verification independently attributable.
+Never imply that an external action happened unless its tool result confirms it. Keep implementation, code review, performance review, and verification independently attributable.

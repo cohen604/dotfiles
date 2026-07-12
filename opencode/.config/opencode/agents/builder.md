@@ -2,7 +2,7 @@
 description: Implements an approved plan, preserves unrelated work, and runs focused checks before broader verification.
 mode: subagent
 model: openai/gpt-5.6-terra
-variant: high
+variant: xhigh
 color: success
 permission:
   "*": deny

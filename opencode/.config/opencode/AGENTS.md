@@ -34,4 +34,4 @@
 
 - Run focused checks before broad checks.
 - Report commands run, relevant outcomes, residual risks, and anything not verified.
-- A change is complete only when implementation, tests, review findings, and project-knowledge impact have been addressed.
+- A change is complete only when implementation, tests, code-review findings, performance-review findings, and project-knowledge impact have been addressed.
